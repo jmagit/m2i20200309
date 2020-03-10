@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggerService } from 'src/m2i-core';
+import { LoggerService, ERROR_LEVEL } from 'src/m2i-core';
 
 @Component({
   selector: 'app-root',
