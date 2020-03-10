@@ -21,6 +21,6 @@ export class AppComponent implements OnInit {
   constructor(private notify: NotificationService) {}
 
   ngOnInit(): void {
-    this.notify.add('Notificación desde el componente principal');
+    // this.notify.add('Notificación desde el componente principal');
   }
 }
