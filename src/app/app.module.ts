@@ -7,11 +7,15 @@ import { M2iCoreModule, ERROR_LEVEL } from 'src/m2i-core';
 import { environment } from 'src/environments/environment';
 import { MainModule } from './main';
 import { DemosComponent } from './demos/demos.component';
+import { HomeComponent } from './home/home.component';
+import { DinamicoComponent } from './dinamico/dinamico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemosComponent
+    DemosComponent,
+    HomeComponent,
+    DinamicoComponent
   ],
   imports: [
     BrowserModule, FormsModule,
