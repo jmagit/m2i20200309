@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1>Hola {{nombre | uppercase}}</h1>
+  <h1>Hola {{nombre | elipsis:10 | uppercase }}</h1>
   <p>
     <input type="text" [(ngModel)]="nombre">
     <input type="button" value="saluda" (click)="saluda()">
@@ -39,5 +39,6 @@
     <input type="text" value="Tabarnia" #txtProvincia>
     <button type="button" (click)="add(txtProvincia.value)">Add</button>
   </p>
-  {{listado | json}}
+  <m2i-sizer (sizeChange)="fontSize=$event;"></m2i-sizer>
+  <p [style.font-size.px]="fontSize">{{listado | json}}</p>
 </div>
