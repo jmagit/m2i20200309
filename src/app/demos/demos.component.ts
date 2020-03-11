@@ -48,7 +48,7 @@ export class DemosComponent implements OnInit, OnDestroy {
 
   add(provincia: string) {
     const id = this.listado[this.listado.length - 1].id + 1;
-    this.listado.push({ id, nombre: provincia});
+    this.listado.push({ id, nombre: provincia });
     this.idProvincia = id;
   }
 
@@ -65,4 +65,24 @@ export class DemosComponent implements OnInit, OnDestroy {
     //   this.suscriptor.unsubscribe();
     // }
   }
+
+  // tslint:disable:member-ordering
+  idiomas = [
+    { codigo: 'es', region: 'España' },
+    { codigo: 'pt', region: 'Portuges' },
+    { codigo: 'en-US', region: 'USA' }
+  ];
+  idioma = this.idiomas[0].codigo;
+  calculos: any[] = [];
+  valCalculadora = 666;
+  // tslint:enable:member-ordering
+
+  ponResultado(origen: string, valor: any) {
+    this.calculos.push({
+      pos: this.calculos.length + 1,
+      origen,
+      valor
+    });
+  }
+
 }
