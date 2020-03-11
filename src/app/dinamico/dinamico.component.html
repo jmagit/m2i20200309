@@ -1,1 +1,7 @@
-<p>dinamico works!</p>
+<p>
+  <input *ngFor="let item of menu; let i=index;"
+    type="button" (click)="seleccionar(i)"
+    value="{{item.texto}}"
+    class="btn btn-link" >
+</p>
+<ng-container *ngComponentOutlet="seleccionado"></ng-container>
