@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 import { DemosComponent } from '../demos/demos.component';
 import { CalculadoraComponent } from '../calculadora/calculadora.component';
+import { ProductosComponent } from '../productos/productos.component';
 
 @Component({
   selector: 'app-dinamico',
@@ -10,8 +11,9 @@ import { CalculadoraComponent } from '../calculadora/calculadora.component';
 })
 export class DinamicoComponent implements OnInit {
   menu = [
-    { texto: 'demos', componente: DemosComponent },
+    { texto: 'productos', componente: ProductosComponent },
     { texto: 'inicio', componente: HomeComponent },
+    { texto: 'demos', componente: DemosComponent },
     { texto: 'calculadora', componente: CalculadoraComponent },
   ];
   seleccionado = this.menu[0].componente;

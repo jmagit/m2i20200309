@@ -15,6 +15,7 @@ import { DemosComponent } from './demos/demos.component';
 import { HomeComponent } from './home/home.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ProductosComponent } from './productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
     DemosComponent,
     HomeComponent,
     DinamicoComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
