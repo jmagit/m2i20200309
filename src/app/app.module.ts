@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ProductosComponent } from './productos/productos.component';
+import { PersonasModule } from './personas';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,8 @@ import { ProductosComponent } from './productos/productos.component';
     ProductosComponent
   ],
   imports: [
-    BrowserModule, FormsModule,
-    AppRoutingModule, MainModule, M2iCoreModule,
+    BrowserModule, FormsModule, HttpClientModule,
+    AppRoutingModule, MainModule, M2iCoreModule, PersonasModule,
   ],
   providers: [
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
