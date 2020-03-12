@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  elemento = {
+   elemento =  {
     id: 1,
     nombre: 'Patatas',
     descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
