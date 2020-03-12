@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { LoggerService } from 'src/m2i-core';
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'calculadora',
