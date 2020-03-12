@@ -10,14 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { M2iCoreModule, ERROR_LEVEL } from 'src/m2i-core';
 import { environment } from 'src/environments/environment';
-import { MainModule } from './main';
+import { MainModule, AjaxWaitInterceptor } from './main';
 import { DemosComponent } from './demos/demos.component';
 import { HomeComponent } from './home/home.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ProductosComponent } from './productos/productos.component';
 import { PersonasModule } from './personas';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
     { provide: LOCALE_ID, useValue: 'es-ES' },
+    { provide: HTTP_INTERCEPTORS, useClass: AjaxWaitInterceptor, multi: true, },
   ],
   bootstrap: [AppComponent]
 })

@@ -90,6 +90,7 @@ export class PersonasViewModelService {
         );
         break;
       case 'view':
+        this.cancel();
         break;
     }
   }
